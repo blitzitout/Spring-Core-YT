@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id = "mathCheat" class="com.practice.diot.MathCheat"/>
+<bean id = "scienceCheat" class="com.practice.diot.ScienceCheating"/>
+<bean id = "javaCheat" class="com.practice.diot.JavaCheating"/>
+
+<bean id = "stu" class = "com.practice.diot.Student">
+    <property name = "id" value = "5" />
+    <property name="cheat" ref = "mathCheat">
+    </property>
+</bean>
+
+<bean id = "anotherStudent" class="com.practice.diot.AnotherStudent">
+    <property name="cheat" ref = "mathCheat"/>
+</bean>
+
+</beans>
